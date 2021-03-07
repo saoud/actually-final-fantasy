@@ -26,7 +26,13 @@ describe('Character', () => {
   
   test('It should add an item to inventory', () => {
     let busterSword = {name: "Buster Sword", bonus:"+1"}
-    Cloud.addItemToInventory (busterSword);
+    Cloud.addItemToInventory(busterSword);
     expect(Cloud.equipment).toEqual({"Buster Sword": {"bonus": "+1", "name": "Buster Sword"}});
   });
+
+  test('It should add a type and bonus to buff', () => {
+    let strengthBuff = {type: "Strength Buff", bonus:"+5"}
+    Cloud.buffAdd(strengthBuff);
+    expect(Cloud.buffs).toEqual({"Strength Buff": {"type": "Strength Buff", "bonus": "+5"}});
+  }); 
 }); 

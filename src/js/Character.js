@@ -8,6 +8,7 @@ export default class Character {
     this.mind = mind;
     this.level = 1;
     this.equipment = {};
+    this.buffs = {};
   }
 
   levelUp() {
@@ -15,6 +16,10 @@ export default class Character {
   }
 
   addItemToInventory(item) {
-    this.equipment[item.name]= item;
+    this.equipment[item.name] = item;
+  }
+
+  buffAdd(buff) {
+    this.buffs[buff.type] = buff;
   }
 }
