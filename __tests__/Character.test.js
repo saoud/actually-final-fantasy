@@ -17,6 +17,7 @@ describe('Character', () => {
     expect(Cloud.mind).toEqual(4);
     expect(Cloud.level).toEqual(1);
     expect(Cloud.equipment).toEqual({});
+    expect(Cloud.buffs).toEqual({});
   });
 
   test('It should add a level to an existing character', () => {
