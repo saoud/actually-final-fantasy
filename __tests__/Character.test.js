@@ -1,4 +1,5 @@
-import {Character, levelUp} from '../src/js/Character.js';
+// import {Character, levelUp, addItemToInventory} from '../src/js/Character.js';
+import Character from '../src/js/Character.js';
 describe('Character', () => {
 
   let Cloud;
@@ -16,10 +17,16 @@ describe('Character', () => {
     expect(Cloud.mind).toEqual(4);
     expect(Cloud.level).toEqual(1);
     expect(Cloud.equipment).toEqual({});
-  })
+  });
 
   test('It should add a level to an existing character', () => {
     Cloud.levelUp();
     expect(Cloud.level).toEqual(2);
-  })
-}) 
+  });
+  
+  test('It should add an item to inventory', () => {
+    let busterSword = {name: "Buster Sword", bonus:"+1"}
+    Cloud.addItemToInventory (busterSword);
+    expect(Cloud.equipment).toEqual({"Buster Sword": {"bonus": "+1", "name": "Buster Sword"}});
+  });
+}); 
