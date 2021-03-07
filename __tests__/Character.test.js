@@ -1,5 +1,4 @@
-import Character from '../src/js/Character.js';
-
+import {Character, levelUp} from '../src/js/Character.js';
 describe('Character', () => {
 
   let Cloud;
@@ -17,5 +16,10 @@ describe('Character', () => {
     expect(Cloud.mind).toEqual(4);
     expect(Cloud.level).toEqual(1);
     expect(Cloud.equipment).toEqual({});
+  })
+
+  test('It should add a level to an existing character', () => {
+    Cloud.levelUp();
+    expect(Cloud.level).toEqual(2);
   })
 }) 

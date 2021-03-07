@@ -1,4 +1,4 @@
-export default class Character {
+export class Character {
   constructor (name, characterClass, hitPoints, strength, toughness, mind) {
     this.name = name;
     this.characterClass = characterClass;
@@ -8,5 +8,9 @@ export default class Character {
     this.mind = mind;
     this.level = 1;
     this.equipment = {};
+  }
+
+  levelUp() {
+    this.level += 1;
   }
 }
