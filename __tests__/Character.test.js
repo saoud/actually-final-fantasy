@@ -1,9 +1,9 @@
-// import {Character, levelUp, addItemToInventory} from '../src/js/Character.js';
 import Character from '../src/js/Character.js';
+
 describe('Character', () => {
 
   let Cloud;
-
+  
   beforeEach(() => {
     Cloud = new Character("Cloud", "Soldier", 12, 7, 7, 4);
   });
