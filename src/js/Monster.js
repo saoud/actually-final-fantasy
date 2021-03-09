@@ -6,4 +6,8 @@ export default class Monster {
     this.type = type;
     this.treasure = {};
   }
+
+  addTreasure(item) {
+    this.treasure[item.name] = item
+  };
 };

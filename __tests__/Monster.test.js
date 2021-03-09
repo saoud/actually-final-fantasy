@@ -14,4 +14,10 @@ describe('Monster', () => {
     expect(It.type).toEqual("Psychic");
     expect(It.treasure).toEqual({});
   });
+
+  test('It should add a treasure object to the monster object', ()=> {
+    let clownMakeup = {name: "Clown makeup", bonus: "+1 mind"};
+    It.addTreasure(clownMakeup);
+    expect(It.treasure).toEqual({"Clown makeup": {"name": "Clown makeup", "bonus": "+1 mind"}});
+  });
 });
